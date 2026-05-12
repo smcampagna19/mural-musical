@@ -1,0 +1,22 @@
+# CSS
+*.css
+!*.min.css
+
+# HTML
+*.html
+!index.html
+!*.template.html
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
