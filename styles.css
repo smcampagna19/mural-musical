@@ -1,0 +1,145 @@
+﻿:root {
+    --cd-image: url("https://fluorescent-lights.neocities.org/Digital-CD-Disk-Vector-Transparent-PNG.png");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0b0b0b;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.logo {
+    width: 220px;
+    height: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #e50914;
+    font-size: 32px;
+    margin: 25px auto 10px;
+    max-width: 850px;
+}
+
+h2 {
+    color: #ffffff;
+    margin-top: 40px;
+}
+
+p {
+    font-size: 18px;
+    color: #dddddd;
+    max-width: 700px;
+    margin: 15px auto;
+    line-height: 1.5;
+}
+
+.album {
+    width: 100%;
+    margin: 30px auto;
+}
+
+.album img {
+    position: relative;
+    z-index: 3;
+
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+
+    margin: 55px auto 0;
+
+    border-radius: 8px;
+
+}
+
+
+.album img + p {
+    position: relative;
+    z-index: 2;
+
+    width: 200px;
+    margin: 14px auto 15px;
+
+    color: white;
+    font-weight: bold;
+}
+
+
+.album img + p::before {
+    content: "";
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    top: -196px;
+    left: -45px;
+
+    background-image: var(--cd-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    z-index: 1;
+
+    animation: spin 5s linear infinite;
+    transition: left 0.5s ease;
+}
+
+
+.album img:hover + p::before {
+    left: -85px;
+}
+
+
+.album img + p:hover::before {
+    left: -85px;
+}
+
+
+audio {
+    width: 280px;
+    max-width: 90%;
+    margin-top: 10px;
+}
+
+
+audio + p {
+    margin-bottom: 45px;
+    color: #cccccc;
+    font-weight: normal;
+}
+
+
+video {
+    width: 420px;
+    max-width: 90%;
+    border-radius: 10px;
+    margin: 15px auto 35px;
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+footer {
+    background-color: #111;
+    color: #cccccc;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 16px;
+}
